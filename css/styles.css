@@ -680,14 +680,22 @@ span {
 }
 
 .email-form-input {   
-    padding: 8px 0px 8px 16px;
+    padding-left: 16px;
     border-radius: 4px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background-color: #2E2F42;
+    background-color: transparent;
+    color: #ffffff;
     width: 264px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
 }
 
+.email-form-input::placeholder {
+    color: #ffffff;
+}
 
 .form-button {
     border-radius: 4px;
@@ -696,8 +704,10 @@ span {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    width: 165px;
+    min-width: 165px;
+    height: 40px;
     padding: 8px 24px;
+    border: none;
 
     color: #FFF;
     text-align: center;
@@ -750,8 +760,9 @@ span {
     border-radius: 4px;
     align-items: center;
     padding: 72px 24px 24px 24px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.02);
+    box-shadow:0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -759,10 +770,16 @@ span {
     position: absolute;
     top: 24px;
     right: 24px;
-    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #e7e9fc;
-    border: 1px solid rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    padding: 0;
     stroke:#2e2f42;
     fill: #ffffff;
     line-height: 0;
@@ -778,6 +795,10 @@ span {
     fill: #ffffff;    
 }
 
+.modal-close-btn-ic {
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .leave-contacts-text {
     color: #2E2F42;
     text-align: center;  
@@ -787,10 +808,11 @@ span {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 
 .cont-form-field-wrapper {
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 
 .cont-form-field-label {
@@ -815,22 +837,22 @@ span {
     left: 16px;
     transform: translateY(-50%);
     fill: #2e2f42;
-    transition: fill 250ms linear;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .cont-form-input {
     width: 100%;
-    height: 58px;
+    height: 40px;
     background-color: transparent;
     padding: 11px 0 11px 38px;
     border-radius: 4px;
     border: 1px solid  rgba(46, 47, 66, 0.40);
-    transition: border-color 250ms linear;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: 0px solid transparent;
    }
 
 .cont-form-input:focus {
-    fill: #4d5ae5;
+    border-color: #4D5AE5;
 }
 
 .cont-form-input:focus + .review-form-imput-icon {
@@ -845,10 +867,10 @@ span {
     border: 1px solid rgba(46, 47, 66, 0.40);
     padding: 8px 16px;
     resize:none;
-    transition: border-color 250ms linear;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: 0px solid transparent;
 
-    color:  #8E8F99;
+    color: rgba(46, 47, 66, 0.4);
     font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -865,7 +887,7 @@ span {
 }
 
 .cont-form-checkbox-wrapper {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .rev-form-checkbox-label {
@@ -889,13 +911,14 @@ span {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    fill: transparent;
     margin-right: 8px;
 }
 
 .rev-form-checkbox:checked + 
 .rev-form-checkbox-label > 
 .review-form-own-checkbox {
-    background-color: #4D5AE5;
+    background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
 }
@@ -915,10 +938,14 @@ span {
     opacity: 1;
 }
 
+.link-pr-pol {
+    color: #4d5ae5;
+}
+
 .review-form-submit-btn {
-    width: 169px;
+    min-width: 169px;
     height: 56px;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items:center;
     margin-left: auto;
@@ -928,6 +955,8 @@ span {
     border-radius: 4px;
     background: #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     color:  #FFF;
     text-align: center;
