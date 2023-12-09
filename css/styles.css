@@ -54,6 +54,10 @@ body {
     line-height: 1.5;
  }
 
+ .accent-color {
+    color: #4D5AE5;
+ }
+
 .page-header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px 
@@ -576,7 +580,6 @@ span {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     display: inline-block;
   }
 
@@ -643,4 +646,295 @@ span {
 
 .footer-soc-list-icons {
     fill: #f4f4fd;
+}
+
+.container-form {
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;     
+    margin-left: 80px;
+}
+
+.feedback-form {
+    display: flex;
+    width: 264px;
+    height: 40px;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+ .subscr {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.email-form-input {   
+    padding: 8px 0px 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background-color: #2E2F42;
+    width: 264px;
+}
+
+
+.form-button {
+    border-radius: 4px;
+    background: #4D5AE5;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 165px;
+    padding: 8px 24px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+.teleframm-btn-icon {
+    margin-left: 16px;
+}
+
+/*modal*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+    width: 408px;
+    min-height:584px;
+    margin: auto;
+    background: #fcfcfc;
+    border-radius: 4px;
+    align-items: center;
+    padding: 72px 24px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.02);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    cursor: pointer;
+    stroke:#2e2f42;
+    fill: #ffffff;
+    line-height: 0;
+    transition: background-color 250ms 
+    cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;    
+}
+
+.leave-contacts-text {
+    color: #2E2F42;
+    text-align: center;  
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.cont-form-field-wrapper {
+    margin-bottom: 18px;
+}
+
+.cont-form-field-label {
+    display: block;
+    margin-bottom: 4px;
+    color:  #8E8F99;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+}
+
+.review-form-input-wrapper {
+    position: relative;
+}
+
+.review-form-imput-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2e2f42;
+    transition: fill 250ms linear;
+    }
+
+.cont-form-input {
+    width: 100%;
+    height: 58px;
+    background-color: transparent;
+    padding: 11px 0 11px 38px;
+    border-radius: 4px;
+    border: 1px solid  rgba(46, 47, 66, 0.40);
+    transition: border-color 250ms linear;
+    outline: 0px solid transparent;
+   }
+
+.cont-form-input:focus {
+    fill: #4d5ae5;
+}
+
+.cont-form-input:focus + .review-form-imput-icon {
+    fill: #4d5ae5;
+}
+
+.review-form-comment {
+    width: 100%;
+    height: 120px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    padding: 8px 16px;
+    resize:none;
+    transition: border-color 250ms linear;
+    outline: 0px solid transparent;
+
+    color:  #8E8F99;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.review-form-comment::placeholder {
+    color: #8E8F99;
+}
+
+.review-form-comment:focus {
+    border-color: #4d5ae5;
+}
+
+.cont-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.rev-form-checkbox-label {
+    color: #8E8F99;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.review-form-own-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.rev-form-checkbox:checked + 
+.rev-form-checkbox-label > 
+.review-form-own-checkbox {
+    background-color: #4D5AE5;
+    border: none;
+    fill: #f4f4fd;
+}
+
+.rev-form-checkbox:focus + 
+.rev-form-checkbox-label > 
+.review-form-own-checkbox {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.review-form-own-checkbox-icon {
+    fill: #F4F4FD;
+    opacity: 0;
+}
+
+.rev-form-checkbox:checked + .rev-form-checkbox-label .review-form-own-checkbox-icon {
+    opacity: 1;
+}
+
+.review-form-submit-btn {
+    width: 169px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+    gap: 10px;
+    border-radius: 4px;
+    background: #4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    color:  #FFF;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
 }
