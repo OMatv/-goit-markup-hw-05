@@ -659,7 +659,6 @@ span {
     display: flex;
     width: 264px;
     height: 40px;
-    flex-direction: column;
     gap: 24px;
     border-radius: 4px;
     border: 1px solid #FFF;
@@ -706,7 +705,6 @@ span {
     gap: 16px;
     min-width: 165px;
     height: 40px;
-    padding: 8px 24px;
     border: none;
     color: #FFF;
     text-align: center;
@@ -832,6 +830,7 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .review-form-input-wrapper {
     position: relative;
  
+
 }
 
 .comment-form-field-wrapper {
